@@ -1,0 +1,10 @@
+#Cabecalho{
+    display: flex;
+    width: 100%;
+}
+
+.grupoPesquisa {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}

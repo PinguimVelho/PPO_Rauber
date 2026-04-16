@@ -1,0 +1,74 @@
+.button{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 6px;
+}
+
+
+.button.blue{
+    background-color: #3b82f6;
+}
+
+button.green{
+    background-color: #06b6d4;
+}
+
+button.red{
+    background-color: #f43f5e;
+}
+
+.button:hover{
+    box-shadow: inset 220px 0 0 #00000055;
+}
+
+@media(max-width:480px){
+    .button.mobile{
+        color:transparent;
+        font-size:0;
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        position:fixed;
+        top: 90vh;
+        left: 80vw;
+    }
+    .button.mobile::before{
+        content: "+";
+        color:black;
+        font-size:2rem;
+        width:100%;
+        height:100%;
+    }
+}
+
+.pesquisa {
+    background-color: white;
+    border: solid gray 1px;
+    height: 40px; 
+    padding: 6px 12px;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 6px;
+}
+
+#tipoFiltro {
+    background-image: url(https://img.icons8.com/?size=100&id=37218&format=png&color=000000);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 26px;
+    width: 40px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    appearance: none;
+    padding: 0;
+    border: none;
+    font-size: 1rem;
+}

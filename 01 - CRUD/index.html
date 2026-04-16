@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <script src="main.js" defer></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Funcionários</h1>
+    </header>
+    <main>
+        <div id="Cabecalho">
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Funcionário</button>
+
+        <div class="grupoPesquisa">
+            <input type="text" class="pesquisa" id="barraPesquisa" placeholder="Pesquisar por Id" autocomplete="off">
+            <select id="tipoFiltro" class="pesquisa">
+                <option value="nome">Nome</option>
+                <option value="id" selected>Id</option>
+                <option value="email">Email</option>
+                <option value="telefone">Telefone</option>
+                <option value="cidade">Cidade</option>
+            </select>
+        </div>
+        </div>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Id</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Funcionário</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Funcionário" required>
+                    <input type="text" id="id" class="modal-field" placeholder="Id do Funcionário" required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail do Funcionário" required>
+                    <input type="text" id="telefone" class="modal-field" placeholder="Telefone do Funcionário" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Funcionário" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <div id="notification"></div>
+    <footer>
+        Copyright &copy; Todos os direitos roubados por Francisco G. Dall'Asta
+    </footer>
+</body>
+
+</html>
