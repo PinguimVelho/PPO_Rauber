@@ -61,6 +61,7 @@ const saveClient = () => {
             updateTable()
             closeModal()
         }
+        activeNotification("Funcionário Salvo!!", '#06b6d4')
     }
 }
 
@@ -117,6 +118,7 @@ const editDelete = (event) => {
             if (response == true) {
                 deleteClient(index)
                 updateTable()    
+                activeNotification("Funcionário Deletado!!", '#f43f5e')
             }
         }
     }
@@ -167,8 +169,17 @@ const changePlaceholder = () => {
     document.getElementById('barraPesquisa').placeholder = `Pesquisar por ${tipoUpper}`
 }
 
-const activeNotification = () => {
-    
+const activeNotification = (mensagem, cor) => {
+    const notification = document.getElementById('notification')
+    notification.innerHTML = mensagem
+    notification.style.backgroundColor = cor
+    setTimeout(() => {
+        notification.style.opacity = 1
+    }, 300)
+    setTimeout(() => {
+        notification.style.opacity = 0
+    }, 4500)
+
 }
     
 //Eventos
